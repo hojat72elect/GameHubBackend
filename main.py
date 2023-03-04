@@ -1,4 +1,4 @@
-from MainScraper import parseGameSpotUrl
+from MainScraper import getArticleUrls
 
 
 def print_hi(name):
@@ -6,4 +6,4 @@ def print_hi(name):
 
 
 if __name__ == '__main__':
-    parseGameSpotUrl("https://www.gamespot.com/news/?page=4")
+    getArticleUrls("https://www.gamespot.com/news/?page=4")

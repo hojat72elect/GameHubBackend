@@ -1,11 +1,18 @@
 import requests
 from bs4 import BeautifulSoup
 
+""""
+You give this function the link to a news page of GameSpot (something like [https://www.gamespot.com/news/?page=110])
+and it will return URLs of all the news in that page. 
 
-def parseGameSpotUrl(url):
-    requestedPage = requests.get(url)
-    soup = BeautifulSoup(requestedPage.content, "html.parser")
+"""
 
-    newsTitles = soup.find_all("h4", class_="card-item__title")
-    for title in newsTitles:
-        print(title.text, end="\n" * 2)
+
+def getArticleUrls(url):
+    newsPage = requests.get(url)
+    soup = BeautifulSoup(newsPage.content, "html.parser")
+    articleUrls = soup.find_all("a", class_="card-item__link")  # bs4.element.ResultSet
+
+    for link in articleUrls:
+        articleUrl = link["href"]
+        print(f"https://www.gamespot.com{articleUrl}\n\n")
