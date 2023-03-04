@@ -6,4 +6,5 @@ def print_hi(name):
 
 
 if __name__ == '__main__':
-    getArticleUrls("https://www.gamespot.com/news/?page=4")
+    pageArticles= getArticleUrls("https://www.gamespot.com/news/?page=4")
+    print(pageArticles)

@@ -13,6 +13,10 @@ def getArticleUrls(url):
     soup = BeautifulSoup(newsPage.content, "html.parser")
     articleUrls = soup.find_all("a", class_="card-item__link")  # bs4.element.ResultSet
 
+    articleUrlsList = []
+
     for link in articleUrls:
         articleUrl = link["href"]
-        print(f"https://www.gamespot.com{articleUrl}\n\n")
+        articleUrlsList.append(f"https://www.gamespot.com{articleUrl}")
+
+    return articleUrlsList
