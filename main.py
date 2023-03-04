@@ -1,4 +1,4 @@
-from MainScraper import getArticleUrls
+from getArticleUrls import getArticleUrls
 
 
 def print_hi(name):
