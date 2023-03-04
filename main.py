@@ -1,10 +1,10 @@
 from getArticleUrls import getArticleUrls
 
-
-def print_hi(name):
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
 if __name__ == '__main__':
-    pageArticles= getArticleUrls("https://www.gamespot.com/news/?page=4")
-    print(pageArticles)
+    # first provide the number of pages you want to parse
+    numberOfNewsPages = 5
+    for pageNumber in range(1, numberOfNewsPages):
+        pageArticles = getArticleUrls(f"https://www.gamespot.com/news/?page={pageNumber}")
+        print(pageArticles)
+
+
