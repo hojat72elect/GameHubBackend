@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/GameHubDataBase.iml" filepath="$PROJECT_DIR$/.idea/GameHubDataBase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/GameHubBackend.iml" filepath="$PROJECT_DIR$/.idea/GameHubBackend.iml" />
     </modules>
   </component>
 </project>
