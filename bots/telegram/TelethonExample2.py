@@ -1,19 +1,22 @@
+import asyncio
+
 from telethon import TelegramClient
 from telethon.tl.functions.channels import JoinChannelRequest
-
 from bots.tokens import TELEGRAM_API_ID, TELEGRAM_API_HASH
 
-# create the client
-client = TelegramClient('session_name', TELEGRAM_API_ID, TELEGRAM_API_HASH)
-client.start()
 
-result =  printMembers()
+async def getMembers() -> asyncio.coroutine:
+    # Make the client
+    client = TelegramClient('session_name', TELEGRAM_API_ID, TELEGRAM_API_HASH)
+    client.start()
+
+    channels = ["kotlinmpp"]
+
+    for channel in channels:
+        # join the channel
+        await client(JoinChannelRequest(channel))
+
+    print("finished")
 
 
-def printMembers():
-    # list of telegram groups that we want to scrape
-    targetGroup = 'kotlinmpp'
-    await client(JoinChannelRequest(targetGroup))
-    allMembers = client.get_participants(targetGroup, aggressive=True)
-
-    return allMembers
+asyncio.run(getMembers())

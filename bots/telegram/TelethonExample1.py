@@ -1,6 +1,4 @@
-from sys import excepthook
-
-from telethon import TelegramClient, events, sync
+from telethon import TelegramClient
 
 from bots.tokens import TELEGRAM_API_ID, TELEGRAM_API_HASH
 
@@ -19,9 +17,5 @@ message = f"Hey there! 👋\n This is an Android app for following all the lates
 # All the recipients
 try:
     client.send_message('hojat72elect', message)
-    client.send_message('dmikots', message)
-    client.send_message('mksmyoucan', message)
-    client.send_message('Ilsave7', message)
-    client.send_message('kylichist', message)
 except:
     print("an error occurred")
