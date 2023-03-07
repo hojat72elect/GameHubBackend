@@ -64,7 +64,7 @@ reposList7 = ["https://github.com/google/iosched"]
 
 def extractAllStarGazers():
     try:
-        for baseUrl in reposList4:
+        for baseUrl in reposList5:
             for pageNumber in range(1, 100):
                 extractSinglePage(page=f"{baseUrl}?page={pageNumber}")
     except:
