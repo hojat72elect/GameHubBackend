@@ -46,10 +46,25 @@ reposList2 = ["https://github.com/godotengine/godot/stargazers",
               "https://github.com/blender/blender/stargazers",
               "https://github.com/libgdx/libgdx/stargazers"]
 
+reposList3 = ["https://github.com/apache/echarts/stargazers",
+              "https://github.com/apache/superset/stargazers",
+              "https://github.com/apache/dubbo/stargazers"]
+
+reposList4 = ["https://github.com/apache/spark/stargazers",
+              "https://github.com/justjavac/free-programming-books-zh_CN/stargazers"]
+
+reposList5 = ["https://github.com/square/okhttp/stargazers",
+              "https://github.com/square/leakcanary/stargazers"]
+
+reposList5 = ["https://github.com/JetBrains/kotlin/stargazers",
+              "https://github.com/NativeScript/NativeScript/stargazers"]
+
+reposList6 = ["https://github.com/google/iosched"]
+
 
 def extractAllStarGazers():
     try:
-        for baseUrl in reposList2:
+        for baseUrl in reposList3:
             for pageNumber in range(1, 100):
                 extractSinglePage(page=f"{baseUrl}?page={pageNumber}")
     except:
