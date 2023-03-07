@@ -48,3 +48,6 @@ def extractAllStarGazers():
                 extractSinglePage(page=f"{baseUrl}?page={pageNumber}")
     except:
         extractAllStarGazers()
+
+
+extractAllStarGazers()
