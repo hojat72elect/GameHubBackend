@@ -56,15 +56,15 @@ reposList4 = ["https://github.com/apache/spark/stargazers",
 reposList5 = ["https://github.com/square/okhttp/stargazers",
               "https://github.com/square/leakcanary/stargazers"]
 
-reposList5 = ["https://github.com/JetBrains/kotlin/stargazers",
+reposList6 = ["https://github.com/JetBrains/kotlin/stargazers",
               "https://github.com/NativeScript/NativeScript/stargazers"]
 
-reposList6 = ["https://github.com/google/iosched"]
+reposList7 = ["https://github.com/google/iosched"]
 
 
 def extractAllStarGazers():
     try:
-        for baseUrl in reposList3:
+        for baseUrl in reposList4:
             for pageNumber in range(1, 100):
                 extractSinglePage(page=f"{baseUrl}?page={pageNumber}")
     except:
