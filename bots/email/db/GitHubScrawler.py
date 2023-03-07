@@ -12,7 +12,7 @@ def writeToGithubDb(GithubUserName):
     """
    You give it a GitHub user name and it will be stored in a CSV file.
     """
-    with open("github_handles.csv", mode="a") as db:
+    with open("github1.csv", mode="a") as db:
         writerObj = writer(db)
         writerObj.writerow([GithubUserName])
         db.close()
