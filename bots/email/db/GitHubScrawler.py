@@ -33,21 +33,30 @@ def extractSinglePage(page):
 
 
 # pay attention that this list should only contain
-reposList = ["https://github.com/freeCodeCamp/freeCodeCamp/stargazers",
-             "https://github.com/sindresorhus/awesome/stargazers",
-             "https://github.com/jwasham/coding-interview-university/stargazers",
-             "https://github.com/996icu/996.ICU/stargazers",
-             "https://github.com/EbookFoundation/free-programming-books/stargazers"
-             ]
+reposList1 = ["https://github.com/freeCodeCamp/freeCodeCamp/stargazers",
+              "https://github.com/sindresorhus/awesome/stargazers",
+              "https://github.com/jwasham/coding-interview-university/stargazers",
+              "https://github.com/996icu/996.ICU/stargazers",
+              "https://github.com/EbookFoundation/free-programming-books/stargazers"
+              ]
+
+reposList2 = ["https://github.com/godotengine/godot/stargazers",
+              "https://github.com/cocos2d/cocos2d-x/stargazers",
+              "https://github.com/stride3d/stride/stargazers",
+              "https://github.com/blender/blender/stargazers",
+              "https://github.com/libgdx/libgdx/stargazers"]
 
 
 def extractAllStarGazers():
     try:
-        for baseUrl in reposList:
+        for baseUrl in reposList2:
             for pageNumber in range(1, 100):
                 extractSinglePage(page=f"{baseUrl}?page={pageNumber}")
     except:
         extractAllStarGazers()
 
 
-extractAllStarGazers()
+try:
+    extractAllStarGazers()
+except:
+    extractAllStarGazers()
