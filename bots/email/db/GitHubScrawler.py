@@ -1,3 +1,7 @@
+"""
+Don't run this file again, it will crash the IDE.
+"""
+
 from csv import writer
 
 import requests
@@ -64,7 +68,7 @@ reposList7 = ["https://github.com/google/iosched"]
 
 def extractAllStarGazers():
     try:
-        for baseUrl in reposList6:
+        for baseUrl in reposList7:
             for pageNumber in range(1, 100):
                 extractSinglePage(page=f"{baseUrl}?page={pageNumber}")
     except:
