@@ -53,7 +53,7 @@ for g in groups:
 
 # now we extract users from these groups, one by one.
 print("fetching members")
-group = groups[1]
+group = groups[2]
 allParticipants = []
 allParticipants = client.get_participants(group, aggressive=True)
 
