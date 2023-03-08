@@ -40,8 +40,7 @@ chats.extend(result.chats)
 
 for chat in chats:
     try:
-        if chat.megagroup:
-            groups.append(chat)
+        groups.append(chat)
     except:
         continue
 
@@ -53,10 +52,10 @@ for g in groups:
 
 # now we extract users from these groups, one by one.
 # print("fetching members")
-# group = groups[2]
+# group = groups[26]
 # allParticipants = []
 # allParticipants = client.get_participants(group, aggressive=True)
-
+#
 # print('Saving In file...')
 # with open("telegram_accounts.csv", "a", encoding='UTF-8') as f:
 #     writer = csv.writer(f, delimiter=",", lineterminator="\n")
